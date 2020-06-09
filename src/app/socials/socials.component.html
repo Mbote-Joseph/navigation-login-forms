@@ -1,0 +1,39 @@
+<div class="medium-list">
+    <div class="list-viewer-wrapper">
+      <div class="list-header-title">Social</div>
+  
+      <form [formGroup]="socialsForm" (ngSubmit)="socialsForm.valid && onSocialsSubmit()" novalidate>
+        <div class="form-container">
+          <mat-form-field>
+            <input id="socialName"
+                   matInput
+                   formControlName="socialName"
+                   [(ngModel)]="socials.socialName"
+                   placeholder="Enter your social Name" />
+          </mat-form-field>
+          <mat-form-field>
+          <input id="socialLink"
+                   matInput
+                   formControlName="socialLink"
+                   [(ngModel)]="socials.socialLink"
+                   placeholder="Enter your social Link" />
+          </mat-form-field>
+
+          <mat-form-field>
+          <input id="socialDesc"
+                   matInput
+                   formControlName="socialDesc"
+                   [(ngModel)]="socials.socialDesc"
+                   placeholder="Enter your social Desc" />
+          </mat-form-field>
+
+  
+            <button mat-button type="submit" 
+                    class="mat-raised-button mat-primary" 
+                    [disabled]="!socialsForm.valid"> Register Social</button>
+            <button mat-button routerLink="/login" class="divider">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

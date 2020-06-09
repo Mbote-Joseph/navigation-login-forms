@@ -1,0 +1,107 @@
+<div class="medium-list">
+    <div class="list-viewer-wrapper">
+      <div class="list-header-title">Register</div>
+  
+      <form [formGroup]="registerForm" (ngSubmit)="registerForm.valid && onRegisterSubmit()" novalidate>
+        <div class="form-container">
+          <mat-form-field>
+            <input id="name"
+                   matInput
+                   formControlName="name"
+                   [(ngModel)]="user.name"
+                   placeholder="Enter your name" />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input id="company"
+                   matInput
+                   formControlName="company"
+                   [(ngModel)]="user.company"
+                   placeholder="Enter your company" />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input id="position"
+                   matInput
+                   formControlName="position"
+                   [(ngModel)]="user.position"
+                   placeholder="Enter your position" />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input id="department"
+                   matInput
+                   formControlName="department"
+                   [(ngModel)]="user.department"
+                   placeholder="Enter your department" />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input id="phone"
+                   matInput
+                   formControlName="phone"
+                   [(ngModel)]="user.phone"
+                   placeholder="Enter your phone" />
+          </mat-form-field>
+          
+          <mat-form-field>
+            <input id="mobile"
+                   matInput
+                   formControlName="mobile"
+                   [(ngModel)]="user.mobile"
+                   placeholder="Enter your mobile" />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input id="website"
+                   matInput
+                   formControlName="website"
+                   [(ngModel)]="user.website"
+                   placeholder="Enter your website" />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input id="skype"
+                   matInput
+                   formControlName="skype"
+                   [(ngModel)]="user.skype"
+                   placeholder="Enter your skype" />
+          </mat-form-field>
+  
+          <mat-form-field>
+              <input id="email"
+                     matInput
+                     formControlName="email"
+                     [(ngModel)]="user.email"
+                     placeholder="Enter your email" />
+            </mat-form-field>
+  
+          <mat-form-field>
+              <input id="password"
+                     matInput
+                     formControlName="password"
+                     [(ngModel)]="user.password"
+                     placeholder="Enter your password"
+                     [type]="hide ? 'password':'text'" />
+                <mat-icon matSuffix (click)="hide = !hide">
+                  {{hide ? 'visibility' : 'visibility_off'}}
+                </mat-icon>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input id="address"
+                       matInput
+                       formControlName="address"
+                       [(ngModel)]="user.address"
+                       placeholder="Enter your address" />
+              </mat-form-field>
+  
+            <button mat-button type="submit" 
+                    class="mat-raised-button mat-primary" 
+                    [disabled]="!registerForm.valid">Register</button>
+            <button mat-button routerLink="/login" class="divider">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

@@ -1,0 +1,39 @@
+<div class="medium-list">
+    <div class="list-viewer-wrapper">
+      <div class="list-header-title">Template</div>
+  
+      <form [formGroup]="templateForm" (ngSubmit)="templateForm.valid && onTemplateSubmit()" novalidate>
+        <div class="form-container">
+          <mat-form-field>
+            <input id="templateName"
+                   matInput
+                   formControlName="templateName"
+                   [(ngModel)]="template.templateName"
+                   placeholder="Enter your template Name" />
+          </mat-form-field>
+          <mat-form-field>
+          <input id="templateDesc"
+                   matInput
+                   formControlName="templateDesc"
+                   [(ngModel)]="template.templateDesc"
+                   placeholder="Enter your template Desc" />
+          </mat-form-field>
+
+          <mat-form-field>
+          <input id="templateFilename"
+                   matInput
+                   formControlName="templateFilename"
+                   [(ngModel)]="template.templateFilename"
+                   placeholder="Enter your template Filename" />
+          </mat-form-field>
+
+  
+            <button mat-button type="submit" 
+                    class="mat-raised-button mat-primary" 
+                    [disabled]="!templateForm.valid"> Register Template</button>
+            <button mat-button routerLink="/login" class="divider">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
